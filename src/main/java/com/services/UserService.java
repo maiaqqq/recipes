@@ -1,0 +1,13 @@
+package com.services;
+
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
+public class UserService {
+    public User getCurrentUser(){
+        
+    }
+}
