@@ -18,8 +18,10 @@ public class RecipeController {
 
     @PostMapping
     public Recipe createRecipe(@RequestBody Recipe recipe) {
-        if(userService.getCurrentUser){
-            return 
+        Recipe newRecipe;
+        if(userService.getCurrentUser() != null){
+            newRecipe.setUser(userService.getCurrentUser());
         }
+        return newRecipe;
     }
 }
