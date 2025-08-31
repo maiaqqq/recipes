@@ -1,11 +1,12 @@
-package com.services;
+package com.example.recipes.services;
 
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.recipes.entities.Recipe;
 
 @Service
 @Transactional
 public class RecipeService {
-    
+   
 }

@@ -15,23 +15,23 @@ public class User {
     @Column(name = "USER_ID")
     private Integer id;
     
-    @Column(name = "USERNAME")
+    @Column(name = "USERNAME", unique = true)
     private String username;
 
     @Column(name = "EMAIL", unique = true)
     private String email;
 
+    @Column(name = "ADMIN")
+    private Boolean admin;
 
     @Column(name = "PASSWORD")
     private String password;
-
 
     @Column(name = "ACTIVE")
     private Boolean active;
 
     @OneToMany(mappedBy = "USER")
     private Set<Recipe> recipes;
-
 
     public Integer getId() {
         return id;
@@ -55,6 +55,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Boolean getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        this.admin = admin;
     }
 
     @JsonIgnore

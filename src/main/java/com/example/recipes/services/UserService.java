@@ -1,4 +1,4 @@
-package com.services;
+package com.example.recipes.services;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 @Service
 @Transactional
 public class UserService {
+    
     public User getCurrentUser(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return authentication.getUser();
